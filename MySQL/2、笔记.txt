@@ -1,0 +1,70 @@
+模糊查询和正则查询
+	LIKE用于在where子句中进行模糊查询，SQL LIKE子句中使用百分号%字符来表示任意字符，_下划线表示任意一个字符；
+
+	使用LIKE子句从数据表中读取数据的通用语法：
+		SELECT field1, field2,.....fieldN
+		FROM tablename
+		WHERE field1 LIKE condition1
+
+		mysql> select * from class_1 where name like 'A%';
+	
+
+	mysql中对正则表达式的支持有限，只支持部分正则元字符
+		SELECT fileld1, field2, ...fieldN
+		FROM table_name
+		WHERE field1 REGEXP condition1;
+
+
+排序：
+	ORDER BY (order by)子句来设定你想按那个字段那种方式来进行排序，在返回搜索结果。（永远放在SQL命令的倒数第二的位置写）
+	使用ORDER BY子句将查询数据排序后再返回数据：
+		SELECT field1,field2,...fieldN FROM table_name1 WHERE field1 ORDER BY field1 [ASC [DESC]];
+
+
+	默认情况ASC表示升序，DESC表示降序
+		SELECT * FROM class_1 WHERE sex='m' order by age;
+	SELECT * FROM class_1 WHERE sex='m' order by age,name; 当age相同时，按照name进行排序
+
+
+分页：
+	LIMIT 子句用于限制有select语句返回的数据量或者UPDATE,DELETE语句的操作数量（永远放在SQL命令的最后写）
+	limit m,n: 从第（m+1）条记录开始，显示n条，例如每页显示10条，显示第6页内容   limit (页数-1) * 10,10
+		SELECT column1, column2, columnN
+		FROM table_name
+		WHERE field
+		LIMIT [num]
+	例（最大的三行数据）：select * from tablename order by age desc limit 3;
+
+联合查询
+	UNION 操作符用于连接两个以上的SELECT语句的结果组合到一个结果集合中。多个SELECT语句会删除重复的数据。
+	UNION 操作符语法格式：
+		SELECT expression1, expression2, ... expression_n
+		FROM tables
+		[WHERE conditions]
+		UNION [ALL | DISTINCT]
+		SELECT expression1, expression2, ... expression_n
+		FROM tables
+		[WHERE conditions];
+	expression1, expression2, ... expression_n:要检索的列
+	tables: 要检索的数据表
+	WHERE conditions: 可选，检索条件
+	DISTINCT: 可选，删除结果集中重复的数据。默认情况下UNION操作符已经删除了重复数据，所以DISTINCT修饰符对结果没啥影响。
+	ALL: 可选，返回所有结果集，包含重复数据。
+	要求查询的字段必须相同
+多表查询
+	多个数据可以联合查询，语法格式如下
+	SELECT 字段1,字段2...  FROM 表1,表2... [WHERE];
+
+
+备份
+	mysqldump -u用户名 -p 原库名 >~/***.sql
+
+	--all-databases 备份所有库
+	库名 备份单个库
+	-B 库1 库2 库3备份多个库
+	库名 表1 表2 表3 备份指定库的多个表
+
+	恢复命令格式
+	mysql -uroot -p 目标库名<***.sql
+
+

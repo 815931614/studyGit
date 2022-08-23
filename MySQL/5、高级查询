@@ -1,0 +1,110 @@
+嵌套查询(子查询)
+    定义
+        把内层的查询结果作为外层的查询条件；
+
+    语法格式
+        select .. from 表名 where 条件(select.....);
+
+
+    示例
+        把攻击值小于平均攻击值的英雄名字的攻击值显示出来
+            select name,attack from sanguo where attack < (select avg(attack) from sanguo);
+        找出每个国家攻击力最高的英雄的名字和攻击值
+            select name,attack,country from sanguo where (country,attack) in (select country,max(attack) from sanguo group by country);
+
+
+
+
+
+
+多表查询
+    笛卡尔积
+        select  字段名列表 from  表名列表;
+
+
+    多表查询（在笛卡尔积的基础上）
+        select 字段名列表 from 表名列表 where 条件;
+
+
+    示例：
+        显示省和市的详细信息
+            select province.pname,city.cname from city,province where city.cp_id=province.pid;
+        显示省市县详细信息
+            select province.pname,city.cname,county.coname from province,city,county
+            where province.pid=city.cp_id and city.cid=county.copid;
+
+
+
+
+连接查询
+
+    关联查询时，数据库会选择一个驱动表，然后用此表的记录去关联其他表
+​   left join一般以左表为驱动表(right join一般为右表),inner join一般以结果集少的表为驱动表,left join某些情况下会被查询优化器优化为inner join驱动表选择原则：在对最终结果集没影响的前提下，优先选择结果集最少的那张表作为驱动表
+
+
+    内连接（结果同多表查询）
+        select 字段名 from 表1 inner join 表2 on 条件 inner join 表3 on 条件;
+
+
+    示例：
+        显示省和市的详细信息
+            select province.pname,city.cname from city inner join province on province.pid = city.cp_id;
+        显示省市县详细信息
+            select province.pname,city.cname,county.coname from province inner join city on province.pid = city.cp_id inner join county on city.cid=county.copid;
+
+    左外连接
+       以左表为主显示查询结果
+            select 字段名 from 表1 left join 表2 on 条件 left join 表3 on 条件
+            显示省市详细信息
+                select province.pname,city.cname from city left join province on province.pid = city.cp_id;
+                        +-----------+--------------+
+                        | pname     | cname        |
+                        +-----------+--------------+
+                        | 河北省    | 石家庄市     |
+                        | 河北省    | 沧州市       |
+                        | 河北省    | 廊坊市       |
+                        | 陕西省    | 西安市       |
+                        | 四川省    | 成都市       |
+                        | 四川省    | 重庆市       |
+                        | 广东省    | 广州市       |
+                        | 山东省    | 济南市       |
+                        | 湖北省    | 武汉市       |
+                        | 河南省    | 郑州市       |
+                        | NULL      | 北京市       |
+                        | NULL      | 天津市       |
+                        | NULL      | 上海市       |
+                        | NULL      | 哈尔滨       |
+                        | NULL      | 雄安新区     |
+                        +-----------+--------------+
+
+    右外连接
+        用法同左连接，以右表为主显示查询结果
+        select 字段名 from 表1 right join 表2 on 条件 right join 表3 on 条件;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

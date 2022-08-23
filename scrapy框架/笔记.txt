@@ -1,0 +1,329 @@
+节点对象.xpath('')
+1，列表，元素为选择器['<selector data="A">']
+2, 列表.extract(): 序列化列表中所有选择器为Unicode字符串
+3，列表.extract_first() 或者get()（1.6）: 获取列表中第一个序列化的元素(字符串)
+
+pipelines.py中必须由一个函数process_item
+    def process_item(self,item,spider):
+        return item( 此处必须返回item )
+
+
+管道处理数据流程
+    1. 在爬虫文件中为items.py 中类做实例化,用爬下来的数据给对象赋值
+        from ..items import MaotanItem
+        time = MaoyanItem()
+    2. 管道文件(pipelines.py)
+    3. 开启管道(settings.py)
+        ITEM_PIPLINES = {'项目目录名.pipelines.类名':优先级}
+        优先级(1-1000),数字越小优先级越高
+
+
+response
+    1.response.text     : 获取响应内容
+    2.response.body     ： 获取bytes数据类型（相当于requests中content）
+    3.response.spath("")
+
+
+日志变量及日志级别（settings.py）
+
+    # 日志相关变量
+    LOG_LEVEL = ''
+
+    # 本来应该输出到终端的信息，写入到log文件中
+    LOG_FILE = '文件名.log'
+
+
+    # 日志级别
+    5   CRITICAL: 严重错误
+    4   ERROR   : 普通错误
+    3   WARNING : 警告
+    2   INFO    : 一般信息
+    1   DEBUG   : 调试信息
+    # 注意：只显示当前级别的日志和比当前级别日志更严重的
+
+
+数据持久化存储(MySQL)
+实现步骤
+    1、在settings.py中定义相关变量
+    2、pipelines.py中新建管道类，并导入settings模块
+        def open_spider(self, spider):
+            # 爬虫开始执行1次，用于数据库连接
+        def process_item(self,item.,spider):
+            # 用于处理爬取的item数据
+        def close_spider(self, spider):
+            # 爬虫结束时执行一次，用于断开数据库连接
+    3、settings.py中添加此管道
+        ITEM_PIPELINES = {'': 200}
+
+    # 注意：process_item() 函数中一定要return item
+    # 第一个管道返回的item会继续交给下一个管道处理
+
+
+把数据存入MongoDB数据库
+    1、settings.py
+        MONGO_HOST = '127.0.0.1'
+        MONGO_PORT = 27017
+
+    2、pipelines.py
+        import pymongo
+        class MaoyanMongoPipeline(object):
+            def open_spider(self,spider):
+                self.conn = pymongo.MongoClient(
+                    host = MONGO_HOST,
+                    port = MONGO_PORT,
+                )
+                # 库对象
+                self.db = self.conn['yinfansi']
+
+                # 集合（表）对象
+                self.myset = self.db['filmtab']
+
+            def process_item(self,item,spider):
+                film_dict = {
+                    'name' : item['name'],
+                    'nobluray' : item['nobluray'],
+                    'time' : item['time']
+                }
+                self.myset.insert_one(film_dict)
+
+                return item
+
+# mongodb 常用命令
+终端: mongo
+> show dbs
+> use 库民
+> show collections
+> db.集合名.find().pretty() # pretty是格式化输出
+> db.集合名.count() # 统计文档(mysql表记录)个数
+
+
+保持为CSV、josn文件
+    命令格式
+        scrapy crawl maoyan -o maoyan.csv
+        scrapy crawl maoyan -o maoyan.json
+        # settings.py FEED_EXPORT_ENCODING = 'utf-8'
+
+
+
+
+非结构化数据抓取流程
+    1、items.py
+        img_link = scrapy.Field()
+
+
+    2、spider： 提取连接，把链接yield到项目管道
+
+    3、pipelines.py
+        from scrapy.piplines.images import ImagesPipeline
+
+        class SoPipeline(ImagesPipeline):
+
+            def get_media_requests(self,item,info):
+                yield scrapy.Request(item['img_link'])
+    4、settings.py
+        IMAGES_STORE = '文件保存的路径'
+
+
+
+
+scrapy shell的使用
+    基本使用
+        1、scrapy shell URL地址
+        2、request.headers   : 请求头(字典)
+        3、request.meta      :item数据传递，定义代理(字典)
+
+        4、response.text     :字符串
+        5、response.body     :bytes
+        6、response.xpath('')
+
+
+
+scrapy.Request()参数
+    1、url
+    2、callback
+    3、headers
+    4、meta：传递数据，定义代理
+    5、dont_filter: 是否忽略域组限制
+        默认False，检查allowed_domains['']
+
+
+
+
+
+设置中间件(随机User_Agent)
+    少量User-Agent切换
+        方法一
+            # settings.py
+            USER_AGENT = ''
+            DEFAULT_REQUEST_HEADERS = {}
+
+        方法二
+            # spider
+            yield scrapy.Request(
+                url,
+                callback=函数名,
+                headers = {}
+            )
+
+    大量User-Agent切换
+        1、获取User-Agent
+            # 方法1：新建useragents.py,存放大量user-agent,random模块随机切换
+            # 方法2：安装fake_useragent模块(sudo pip2 install fack_useragent)
+
+            from fake_useragent import UserAgent
+            ua_obj = UserAgent()
+            ua = ua_obj.random
+
+        2、middlewares.py 新建中间类
+            class RandomUseragentMiddleware(object):
+                def process_request(self,request,spider):
+                    ua = UserAgent()
+                    request.headers['User-Agent'] = ua.random
+
+        3、settings.py 添加此下载器中间件
+            DOWNLOADER_MIDDLEWARES = {'' : 优先级}
+
+设置中间件(随机代理)
+    request.meta['proxy']  = 'http://127.0.0.1:8888'
+
+   重要代码
+        from .proxies import proxy_list
+        import random
+
+        class RandomProxyDownLoaderMiddleware(object):
+            def process_request(self,request, spider):
+                proxy = random.choice(proxy_list)
+
+                # 为拦截下来的请求设置代理
+                request.meta['proxy'] = proxy
+
+                print(proxy)
+
+            def process_exception(self,request,exception,spider):
+                # 把请求重新交给调度器，再来一遍流程(process_request)
+                return request
+
+
+
+settings.py 常用变量
+   #1、日志级别
+   LOG_LEVEL = ''
+
+   # 2、保存日志文件（不在终端输出）
+   LOG_FILE = ""
+
+   # 3、设置数据导出编码(主要针对json文件)
+   FEED_EXPORT_ENCODING = ''
+
+   # 4、非结构化数据存储路径
+   IMAGES_STORE = '路径'
+
+   # 5、设置User-Agent
+   USER_AGENT = ''
+
+   # 6、设置最大并发数(默认16)
+   CONCURRENT_REQUESTS = 32
+
+   # 7、下载延迟时间(每隔多长时间请求一个网站)
+   # DOWNLOAD_DELAY 会影响CONCURRENT_REQUESTS,不能使用并发显现
+   # 有CONCURRENT_REQUESTS,没有DOWNLOAD_DELAY: 服务器会在同一时间收到大量请求
+   # 有CONCURRENT_REQUESTS,有DOWNLOAD_DELAY时，服务器不会在同一时间收到大量的请求
+    DOWNLOAD_DELAY = 3
+
+   # 8、请求头
+    DEFAULT_REQUEST_HEADERS = {}
+
+   # 9、添加项目管道
+    ITEM_PIPELINES = {}
+
+   # 10、添加下载器中间件
+   DOWNLOADER_MIDDLEWARES = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+分布式爬虫
+    原理
+        多台主机共享一个爬取队列
+
+    实现
+        重写scrapy调度器(scrapy_redis模块)
+        # 利用scrapy_redis实现分布式爬虫
+
+    为什么使用Redis
+
+        1、Redis基于内存，速度快
+        2、Redis非关系型数据库，Redis中集合，存储request的指纹
+        3、scrapy_redis安装
+            sudo pip3 install scrapy_redis
+
+Redis使用
+    Windows安装客户端使用
+        安装:https://github.com/tporadowski/redis/releases
+        1、服务端启动: cmd >
+
+           客户端连接：cmd > redis-cli.exe
+
+
+
+scrapy_redis
+    GitHub地址
+        https://github.com/rmax/scrapy-redis
+
+
+    settings.py说明
+        # 重新指定调度器: 启用Redis调度器存储请求队列
+        SHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+        # 重新指定去重机制: 确保所有的爬虫通过Redis去重
+        DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+        # 不清除Redis队列: 暂停/恢复/断电续爬,True:不清除,False:清除
+        SCHEDULER_PERSIST = True
+
+        # 优先级队列(默认)
+        SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.priorityQueue'
+        # 可选用的其他队列
+        # 先进先出队列
+        SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.FifoQueue'
+        # 后进先出队列
+        SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.LifoQueue'
+
+        # Redis管道
+        ITEM_PIPELINES = {
+            'scrapy_redis.pipelines.RedisPipeline' : 200
+        }
+
+
+        # 指定连接到Redis时使用的端口和地址(可选)
+        REDIS_HOST = 'localhost'
+        REDIS_PORT = 6379
+
+
+改写分布式方法二
+    使用redis_key改写
+        # 第一步
+        # settings.py 和上面分布式代码一致
+        # 第二步:需要改动tencent.py
+        from scrapy_redis.spiders import RedisSpider
+        class TencentSpdier(RedisSpider):
+            # 1.去掉start_urls
+            # 2.定义redis_key
+            redis_key = 'tencent:spider'
+
+        # 第三步:把代码复制到所有爬虫服务器,并启动项目
+        # 第四步
+            到Redis命令行，执行LPUSH命令压入第一个要爬取的URL地址
+            > LPUSH tencent:spider 第一页的URL地址
+
+
+        # 项目爬取结束后无法退出，如何退出?
+            settings.py
+            CLOSESPIDER_TIMEOUT = 3600
+            # 到指定时间(3600秒)时，会自动结束并退出
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

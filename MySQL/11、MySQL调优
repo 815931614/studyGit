@@ -1,0 +1,27 @@
+MySQL调优
+
+    存储引擎优化
+        1、读操作多：MyISAM
+        2、写操作多: InnoDB
+
+    索引优化
+        在 select、where、order by常涉及到的字段建立索引
+
+    SQL语句优化
+        1、单条查询最后添加LIMIT 1,停止全表扫描
+        2、where子句不使用 !=,否则放弃索引全表扫描
+        3、尽量避免NULL值判断，否则放弃索引全表扫描
+            优化前:select number from t1 where number is null;
+            优化后:select number from t1 where number=0;
+            # 在number列上设置默认值0，确保number列五NULL值
+        4、尽量避免 or 连接条件，否则放弃索引全表扫描
+            优化前：select id from t1 where id =10 or id=20;
+            优化后（联合查询）：select id from t1 where id=10 union all
+             select id from ti where id=20;
+        5、模糊查询尽量避免使用前置%，否则全表扫描
+            select name from ti where name like "c%";
+
+        6、尽量避免使用 in 和 not in,否则全表 扫描
+            优化前：select id from t1 where id in(1,2,3,4);
+            优化后(如果是连续): select id from t1 where id between 1 and 4;
+        7、尽量避免使用select * ...;用具体字段代替 *, 不要返回用不到的任何字段

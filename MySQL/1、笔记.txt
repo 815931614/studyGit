@@ -1,0 +1,69 @@
+	
+	# 获取大于等于12，小于等于13
+	select * from 表名 where 字段名 between 12 and 13;
+	
+	# 取反
+	select * from 表名 where 字段名 not between 12 and 13;
+
+
+	# 查找指定值或范围
+	select * from 表名 where 字段名 in (值1,值2,...);
+
+	# 查找为空的，或不为空的
+	select * from 表名 where 字段名 is null;
+	select * from 表名 where 字段名 is not null;
+
+
+逻辑运算符
+	NOT或!		逻辑非
+	AND			逻辑与
+	OR			逻辑或
+	XOR			逻辑异或（a and not b）
+
+
+
+
+primary key 设置主键
+auto_increment 自增
+not null	不许为空
+unsigned	无符号
+default     设置默认值
+
+show create tables tableName;
+desc tableName;
+drop table tableName;
+
+数据增删改查
+	insert into tableName ... values...;
+	delete from tableName where ....;
+	update tableName ... where...;
+	select ... from tableName where....;
+
+修改表结构
+	alter table tableName add: 添加字段
+						  drop：删除字段
+						  change：修改字段名
+						  modify：修改字段类型
+						  rename：修改表名
+			
+
+
+
+
+时间格式：
+	date:"YYYY-MM-DD"
+	time:"HH:MM:SS"
+	datetime:"YYYY-MM-DD HH:MM:SS"  : 不给值默认返回NULL值
+	timestamp:"YYYY-MM-DD HH:MM:SS"  ：不给值默认返回系统当前时间
+
+日期和时间函数：
+	now() 返回服务器当前时间
+	curdate() 返回当前日期
+	curtime() 返回当前时间
+	date(date) 返回指定时间的日期
+	time(date) 返回指定时间的时间
+不给值默认返回NULL值
+
+
+时间查询：
+	select * from textbook where createTime>='1987-2-2'; 引号必须加

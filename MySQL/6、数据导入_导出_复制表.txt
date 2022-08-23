@@ -1,0 +1,122 @@
+数据导入
+    作用
+        把文件系统的内容导入到数据库中
+
+    语法(方式一)
+
+        load data local infile "文件名";
+        into table 表名
+        fields terminated by "分隔符"
+        lines terminated by "\n"
+
+    示例
+        scoretable.csv 文件导入到数据库中
+
+            1、将scoretable.csv放到数据库搜索路径中
+                  查看路径: mysql> show variables like 'secure_file_priv';
+                    /var/lib/mysql-files/
+
+                  linux: sudo cp /home/tarena/scoreTable.csv /var/lib/mysql-files/
+            2、在数据库中创建对应的表
+            3、执行数据导入语句
+
+    练习
+        添加ID字段，要求主键自增长，显示宽度为3，位数不够用0填充；
+            alter table scoretab add id int(3) zerofill primary key auto_increment first;
+
+    语法(方式二)
+        source  文件名.sql
+
+
+
+数据导出
+    作用
+        将数据库中标记录保存到系统中
+    语法格式
+        select 字段名 from 表名
+        into outfile "文件名"
+        fields  terminated by "分隔符"
+        lines terminated by "分隔符"
+
+    例子：
+        select user,host from mysql.user
+        into outfile '/var/lib/mysql-files/user2.txt'
+        fields terminated by '     '
+        lines terminated by '\n';
+
+
+复制表
+    create table 表名 select 查询命令;
+
+    练习
+        1、复制sanguo表的全部记录和字段，sanguo2
+            create table sanguo2 select * from country.sanguo;
+
+        2、复制sanguo表的前3条记录,sanguo3
+            create table sanguo3 select * from country.sanguo limit 3;
+
+        3、复制sanguo表的 id,name,country 三个字段的前3条记录，sanguo4
+            create table sanguo4 select id,name,country from country.sanguo limit 3;
+    注意
+        复制表的时候不会把原有表的key属性复制过来
+
+
+
+    复制表结构
+        create  table 表名 select 查询命令 where false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

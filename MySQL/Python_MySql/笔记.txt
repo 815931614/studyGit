@@ -1,0 +1,42 @@
+pymysql 安装
+    pip install pymysql
+
+
+
+
+
+pymysql 使用流程
+    1.建立数据库连接(db = pymysql.connect(...))
+    2.创建游标对象(c=db.cursor())
+    3.游标方法：c.execute("insert....")
+    4.提交到数据库: db.commit()
+    5.关闭游标对象：c.close()
+    6.断开数据库连接:db.close()
+
+
+
+
+
+
+常用函数
+    db = pymysql.connect(参数列表)
+        host: 主机地址，本地localhost
+        port: 端口号,默认3306
+        user:用户名
+        password: 密码
+        database: 库
+        charset: 编码方式，推荐使用utf8
+
+
+    数据库连接对象（db）的方法
+        db.close() 关闭连接
+        db.commit() 提交到数据库执行
+        db.rollback() 回滚
+        cur = db.cursor() 返回游标对象，用于执行具体SQL命令
+
+    游标对象(cur)的方法
+        cur.execute(sql命令,[列表])执行SQL命令
+        cur.close()关闭游标对象
+        cur.fetchone()获取查询结果集的第一条数据(1,100001,'河北省')
+        cur.fetchmany(n)获取n条((记录1),(记录2))
+        cur.fetchall()获取所有记录

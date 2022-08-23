@@ -1,0 +1,44 @@
+存储引擎（重点）
+    定义
+        处理表的处理器
+
+    基本操作
+        1、查看所有存储引擎
+            MySQL>show engines;
+        2、查看已有表的存储引擎
+            MySQL> show create table 表名;
+        3、创建表指定
+            create table 表名(...)engine = MyISAM,charset=utf8,auto_increment=***;
+        4、已有表指定
+            alter table 表名 engine=innoDB;
+
+
+    常用存储引擎及特点
+        InnoDB
+            1、支持行级锁
+            2、支持外键、事务、事务回滚
+            3、表字段和索引同存储在一个文件中
+                1、表名、frm : 表结构及索引文件
+                2、表名.ibd : 表记录
+
+
+        MyISAM
+            1、支持表级锁
+            2、表字段和索引分开存储
+                1、表名.frm : 表结构
+                2、表名.myi : 索引文件
+                3、表名.myd : 表记录
+
+
+        MEMORY
+            1、表记录存储在内存中、效率高
+            2、服务或主机重启，表记录清除（表结构存储在本地）
+
+    如何选择存储引擎
+        1、执行查操作多的表用MyISAM(使用InnoDB浪费资源)
+        2、执行写操作多的表InnoDB
+        3、临时表：MEMORY
+
+
+
+

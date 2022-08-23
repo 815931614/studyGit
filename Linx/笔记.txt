@@ -1,0 +1,40 @@
+终端操作
+    
+    打开终端: ctrl + alt + t
+	
+	退出终端: exit
+
+	命令行： tarena @   tedu:       ~      $ 
+			 用户名   计算机名   当前路径
+	
+	~ 表示家(home)目录(主目录)
+
+
+	绝对路径： 以/开头, 要从跟一级一级的写路径
+
+	修改根目录下的容需要加管理员权限，即命令前增加sudo
+
+	
+	清屏：Ctrl  + L
+
+
+	复制文件：cp dir1name dir2name -r
+
+
+
+
+	升级软件包：sudo apt-get update	
+	
+	安装软件：sudo apt-get install 软件名
+
+	卸载软件：sudo apt-get remove --purge 软件名
+	
+
+ssh:
+	安装：sudo apt-get install openssh-server
+	
+	查看ssh服务状态：ps -e|grep ssh  (如果没有输出则没有启动)
+	
+	启动和关闭： sudo service ssh start/restart/stop
+
+	生成秘钥对：ssh-keygen

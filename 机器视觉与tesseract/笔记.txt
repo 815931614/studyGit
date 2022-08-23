@@ -1,0 +1,40 @@
+tesserct-ocr
+    OCR的一个底层识别库(不是模块,不能导入)
+    # Google维护的开源OCR识别库
+
+
+pytesseract
+    Python模块，可调用底层识别库
+    # 对tesseract-ocr做的一层Python API封装
+
+
+安装tesseract-ocr
+
+    Ubuntu
+        sudo apt-get install tesseract-ocr
+
+    Windows
+        1、下载安装包https://github.com/UB-Mannheim/tesseract/wiki
+        2、添加环境变量(path)
+
+
+    测试：
+        tesseract xxx.jpg 文件名
+
+安装pytesseract
+    安装
+        sudo pip3 install pytesseract
+
+
+    使用
+        import pytesseract
+
+        # Python图片处理标准库
+        from PIL import Image
+
+        # 创建图片对象
+        img = Image.open('test1.jpg')
+
+        # 图片转字符串
+        result = pytesseract.image_to_string(img)
+        print(result)

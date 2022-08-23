@@ -1,0 +1,30 @@
+配置FIddler
+    # 添加证书信任
+    1、Tools - Options - HTTPS
+        勾选Decrypt Https Traffic 后弹出窗口
+    # 设置只抓取浏览器的数据表
+    2、...from browsers only
+    # 设置监听端口(默认为8888)
+    3、Tools - Options - Connections
+    # 配置完成后重启Fiddler
+    4、关闭Fiddler，再打开Fiddler
+
+
+配置浏览器代理
+    1、安装Proxy SwitchyOmega插件
+    2、浏览器左上角：SwitchyOmega->选项->新建情景模式->（名称）-> 创建
+        输入: HTTP: // 127.0.0.1:8888
+        点击: 应用选项
+    3、点击右上角SwitchyOmega可切换代理
+
+
+
+Fiddler常用菜单
+    1、Inspector：查看数据包详细内容
+        整体分为请求和响应两部分
+    2、常用菜单
+        Headers : 请求头信息
+        WebForms: POST 请求Form表单数据: <body>
+        GET请求查询参数:<QueryString>
+        Raw
+        将整个请求显示为纯文本

@@ -1,0 +1,197 @@
+日期与时间
+    间隔单位: 1 day |  3 month | 2 year
+
+    查询1年以前的用户充值信息
+        select * from tab where time<(NOW()-interval 1 year);
+
+
+    查询成绩不及格的学生姓名及成绩
+        select name,score from students where score between 0 and 59;
+
+    查询AID1903和AID1902班的学生姓名及成绩
+        select name,score form students where class in('AID1903','AID1902')
+
+
+
+
+ MySQL普通查询
+ 3、select ...聚合函数 from 表名
+ 1、where
+ 2、group by ...
+ 4、having
+ 5、order by ...
+ 6、limit ...;
+
+
+
+ 聚合函数：
+    avg(字段名)    该字段的平均值
+    max(字段名)    该字段的最大值
+    min(字段名)    该字段的最小值
+    sum(字段名)    该字段所有记录的和
+    count(字段名)  统计该字段记录的个数
+
+
+
+
+
+
+group by
+    给查询的结果进行分组
+    eg1：计算每个国家的平均攻击力
+        select country,avg(attack) from sanguo group by country;
+
+
+
+    group by后面字段名必须要与select后的字段==
+    查询字段和group by后字段不一致，则必须对该字段进行聚合处理(聚合函数)==
+
+        select country,count(*) as num from sanguo
+        where gender='M'
+        group by country
+        order by count(*) desc   # 也可以使用别名
+        limit 2;
+
+
+
+
+having语句
+    对分组聚合后的结果进行进一步筛选
+     eg1： 找出平均攻击力大于105的国家的前两名，显示国家名称和平均攻击力
+        SELECT country,avg(attack) FROM sanguo
+        GROUP BY country
+        HAVING avg(attack) > 105
+        ORDER BY avg(attack) DESC
+        LIMIT 2;
+
+     注意：
+        having语句通常与group by联合使用；
+        having语句存在弥补where关键字不能与聚合函数联合使用的不足，where只能操作表中实际存在的字段，
+        having操作的是聚合函数生成的显示列；
+
+
+distinct 语句
+    不显示字段重复值
+    eg1：表中都有哪些国家
+        select distinct country from sanguo;
+    eg2：计算一共有多少国家
+        SELECT count(distinct country) from sanguo;
+
+
+    注意：
+    distinct和from之间所有字段都相同才会去重
+    distinct不能对任何字段做聚合处理
+
+
+查询表记录时做数学运算
+    运算符：+ - * / % **
+    eg1: 查询时显示攻击力翻倍
+        select name,attack*2 from sanguo;
+    eg2:更新蜀国所有英雄攻击力 * 2
+        update sanguo set attack=attack*2 where country='蜀国';
+
+
+
+
+
+
+索引概述
+    定义
+        对数据库表的一列或多列的值进行排序的一种结构(Btree方式)
+
+    有点
+        加快数据检索速度
+
+    缺点
+        占用物理存储空间
+        当对表中数据更新时索引需要动态维护，降低数据维护速度
+
+    索引示例
+        1、开启运行时间检测
+            mysql> show variables like '%pro%';
+            mysql> set profiling=1;
+        2、执行查询语句
+        3、查看执行时间
+
+        4、在name字段创建索引
+            create index name on students(name);
+        5、再执行查询语句
+        6、查看执行时间
+            show profiles;
+
+
+索引分类
+    普通(MUL) and 唯一(UNI)
+
+    使用规则
+        1、可设置多个字段
+        2、普通索引：字段值无约束，key标志为MUL
+        3、唯一索引（unique）：字段值不允许重复，但可为NULL,KEY标志为UNI
+        4、哪些字段创建索引：
+            经常用来查询的字段，where条件判断字段，order by排序的字段；
+
+     创建普通索引 和 唯一索引
+
+        创建表：
+            create table 表名(
+                字段名 数据类型,
+                字段名 数据类型,
+                index(字段名),
+                index(字段名),
+                unique(字段名)
+            );
+
+        已有表中创建
+            create [unique] index 索引名 on 表名(字段名);
+
+
+
+        查看索引：
+            1、desc 表名;  --> 标志为： MUL、UNI
+            2、show index from 表名\G;
+
+
+        删除索引：(删除索引一次只能删一个)
+            drop index 索引名 on 表名;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

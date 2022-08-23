@@ -1,0 +1,19 @@
+
+设置密码
+1、启动redis服务，双击redis-server.exe或者在redis文件夹下运行
+	redis-server.exe redis.windows.conf
+
+2、在redis文件夹下打开命令窗口，刚开始连接服务，因为初始没有密码，所以无需输入，即可连接服务，窗口中输入
+	redis-cli.exe -h 127.0.0.1 -p 6379  //无需添加密码参数
+
+然后查看密码
+	config get requirepass
+
+4、设置密码，修改配置文件redis.windows.conf,其中123456是设置的密码
+	requirepass 123456  //此处注意，行前不能有空格
+5、在安装目录下执行
+	redis-server.exe redis.windows.conf
+
+
+6、重新登录获取操作权限
+	redis-cli.exe -h 127.0.0.1 -p 6379 -a 123456 //需添加密码参数

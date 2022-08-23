@@ -1,0 +1,6 @@
+创建项目和爬虫文件
+scrapy  startproject DaoMuBiJi
+
+创建爬虫文件
+cd YinFanSi
+scrapy genspider daimubiji daomubiji.com

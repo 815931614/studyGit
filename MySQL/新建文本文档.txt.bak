@@ -1,0 +1,20 @@
+	
+	# 获取大于等于12，小于等于13
+	select * from 表名 where 字段名 between 12 and 13;
+	
+	# 取反
+	select * from 表名 where 字段名 not between 12 and 13;
+
+
+	# 查找指定值或范围
+	select * from 表名 where 字段名 in (值1,值2,...);
+
+	# 查找为空的，或不为空的
+	select * from 表名 where 字段名 is null;
+	select * from 表名 where 字段名 is not null;
+
+逻辑运算符
+	NOT或!		逻辑非
+	AND			逻辑与
+	OR			逻辑或
+	XOR			逻辑异或（a and not b）
