@@ -1,0 +1,36 @@
+flake8是python发一个静态代码选择工具，用来检测python书写是否规范；yapf是python代码格式化的工具。使用以下命令即可：
+pip install flake8
+
+
+安装好vscode后，打开，Ctrl+Shift+x进行扩展程序的安装，搜索python，点击第一个进行安装。
+
+点击左下角齿轮图标 选择设置，点击工作区，点击右上角使用json设置。
+{
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "python.linting.flake8Args": ["--max-line-length=248"],
+    "python.linting.pylintEnabled": false
+}
+
+
+然后点击左边第四个图标，打开launch.json,添加配置，框中的是你python安装的绝对路径
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "E:\Python\Python38",
+            "program": "${file}",
+            "cwd": "${workspaceRoot}",
+            "env": {},
+            "envFile": "${workspaceRoot}/.env"
+        }
+    ]
+}
+Community Material Theme
