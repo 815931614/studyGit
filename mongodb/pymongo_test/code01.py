@@ -13,7 +13,7 @@ class TestMongo:
 
     
     def __init__(self):
-        client = MongoClient(host='127.0.0.1',port=27017)
+        client = MongoClient(host='127.0.0.1.json',port=27017)
         
         # 选择数据库和集合
         self.collection = client['test101']['t1']

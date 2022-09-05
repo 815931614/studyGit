@@ -23,7 +23,7 @@ cur = db.cursor()
 #
 #
 # try:
-#     sql = f'insert into images values (1, "test.jpg", %s);'
+#     sql = f'insert into images values (1.json, "test.jpg", %s);'
 #
 #     # 用execute自动传参的方法将二进制内容传入语句
 #     cur.execute(sql,[data])
@@ -35,7 +35,7 @@ cur = db.cursor()
 
 
 # 获取文件
-sql = 'select * from images where id = 1;'
+sql = 'select * from images where id = 1.json;'
 
 cur.execute(sql)
 image = cur.fetchone()

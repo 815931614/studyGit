@@ -53,7 +53,7 @@ class LinkedinspiderSpider(CrawlSpider):
     def determine_level(self, response):
         """
         determine the index level of current response, so we can decide wether to continue crawl or not.
-        level 1: people/[a-z].html
+        level 1.json: people/[a-z].html
         level 2: people/[A-Z][\d+].html
         level 3: people/[a-zA-Z0-9-]+.html
         level 4: search page, pub/dir/.+

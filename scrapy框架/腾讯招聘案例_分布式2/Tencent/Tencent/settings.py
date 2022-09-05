@@ -20,7 +20,7 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 SCHEDULER_PERSIST = True
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '127.0.0.1.json'
 REDIS_PORT = 6379
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -88,7 +88,7 @@ ITEM_PIPELINES = {
 #AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
-#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
+#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.json.0
 # Enable showing throttling stats for every response received:
 #AUTOTHROTTLE_DEBUG = False
 

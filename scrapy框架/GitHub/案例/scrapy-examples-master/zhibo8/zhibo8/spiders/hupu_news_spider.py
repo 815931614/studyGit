@@ -14,8 +14,8 @@ class HupuNewsSpider(scrapy.Spider):
         li_list = response.xpath('//div[@class="news-list"]/ul/li')
         for li in li_list:
             #print li.extract()
-            a = li.xpath('div/h4/a[1]')
+            a = li.xpath('div/h4/a[1.json]')
             #print a.extract()
-            title = li.xpath('div/h4/a[1]/text()').extract()
-            link = li.xpath('div/h4/a[1]/@href').extract()
+            title = li.xpath('div/h4/a[1.json]/text()').extract()
+            link = li.xpath('div/h4/a[1.json]/@href').extract()
             print title[0],link[0]

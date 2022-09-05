@@ -19,7 +19,7 @@ from .log import *
 
 
 '''
-1. 默认取sel.css()[0]，如否则需要'__unique':False or __list:True
+1.json. 默认取sel.css()[0]，如否则需要'__unique':False or __list:True
 2. 默认字典均为css解析，如否则需要'__use':'dump'表明是用于dump数据
 '''
 
@@ -83,7 +83,7 @@ class CommonSpider(CrawlSpider):
             else:
                 item[nk] = []
 
-    # 1. item是一个单独的item，所有数据都聚合到其中 *merge
+    # 1.json. item是一个单独的item，所有数据都聚合到其中 *merge
     # 2. 存在item列表，所有item归入items
     def traversal(self, sel, rules, item_class, item, items):
         # print 'traversal:', sel, rules.keys()
@@ -156,7 +156,7 @@ class CommonSpider(CrawlSpider):
     ''' # use parse_with_rules example:
     def parse_people_with_rules(self, response):
         item = self.parse_with_rules(response, self.all_css_rules, ZhihuPeopleItem)
-        item['id'] = urlparse(response.url).path.split('/')[-1]
+        item['id'] = urlparse(response.url).path.split('/')[-1.json]
         info('Parsed '+response.url) # +' to '+str(item))
         return item
     '''

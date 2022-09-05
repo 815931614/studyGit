@@ -51,6 +51,7 @@ scrapy_redis
         }
 
 
+
         # 指定连接到Redis时使用的端口和地址(可选)
         REDIS_HOST = 'localhost'
         REDIS_PORT = 6379

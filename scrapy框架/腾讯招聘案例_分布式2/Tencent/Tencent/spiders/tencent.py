@@ -12,7 +12,7 @@ class TencentSpider(RedisSpider):
     one_link = 'https://careers.tencent.com/tencentcareer/api/post/Query?timestamp=1659939630829&countryId=&cityId=&bgIds=&productId=&categoryId=40001001,40001002,40001003,40001004,40001005,40001006&parentCategoryId=&attrId=&keyword=&pageIndex={}&pageSize=10&language=zh-cn&area=cn'
     two_link = 'https://careers.tencent.com/tencentcareer/api/post/ByPostId?timestamp=1659939982659&postId={}&language=zh-cn'
 
-    # 1. 出掉start_urls
+    # 1.json. 出掉start_urls
     # 项目启动时,阻塞，等待redis发送的指令(URL)
     redis_key = 'tencent:spider'
 

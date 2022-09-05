@@ -174,7 +174,7 @@ HINCRBYFLOAT key field increment
 #### Python基本方法
 
 ```python
-# 1、更新一条数据的属性，没有则创建
+1.json
 hset(name, key, value)
 
 # 2、读取这条数据的指定属性，返回字符串类型

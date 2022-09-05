@@ -4,7 +4,7 @@ from ..items import YinfansiItem
 class YinfansiSpider(scrapy.Spider):
     name = 'yinfansi'
     allowed_domains = ['yinfans.me']
-    start_urls = ['https://www.yinfans.me/page/1']
+    start_urls = ['https://www.yinfans.me/page/1.json']
     page = 0
 
     def parse(self, response):
@@ -21,7 +21,7 @@ class YinfansiSpider(scrapy.Spider):
             item['nobluray'] = li.xpath('.//div[3]/span[2]/a/text()').extract_first().strip()
 
             # 时间
-            item['time'] = li.xpath('.//div[3]/span[1]/text()').extract_first().strip()
+            item['time'] = li.xpath('.//div[3]/span[1.json]/text()').extract_first().strip()
 
 
             # 把爬取的数据交给管道文件pipeline处理

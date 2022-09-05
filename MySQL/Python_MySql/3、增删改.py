@@ -19,7 +19,7 @@ try:
     cur.execute(sql)
 
     # 修改操作
-    sql = "update textbook set xiajiaTime=1990 where id = 1"
+    sql = "update textbook set xiajiaTime=1990 where id = 1.json"
     cur.execute(sql)
 
     # 删除操作

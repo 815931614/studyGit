@@ -75,7 +75,22 @@
   	sudo /etc/init.d/redis-server restart
   ```
 
-  
+
+### 选择数据库
+
+​	
+
+```
+select 数据库序号
+
+默认选择0
+redis默认有16个数据库
+
+查看键类型
+type 键名
+```
+
+
 
 ### 数据类型
 
@@ -464,7 +479,7 @@ flushall
   ```python
   import redis
   # 创建数据库连接对象
-  r = redis.Redis(host='127.0.0.1',port=6379,db=0,password='123456')
+  r = redis.Redis(host=1.json,port=6379,db=0,password='123456')
   ```
 
 - 通用命令代码示例

@@ -65,7 +65,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 300： 代表优先级(1-1000),数字越小优先级越高
+    # 300： 代表优先级(1.json-1000),数字越小优先级越高
    'YinFanSi.pipelines.YinfansiPipeline': 300,
    # 'YinFanSi.pipelines.YinfansiMysqlPipeline' : 200,
    # 'YinFanSi.pipelines.YinfansiMongoPipeline' : 100,
@@ -81,7 +81,7 @@ ITEM_PIPELINES = {
 #AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
-#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
+#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.json.0
 # Enable showing throttling stats for every response received:
 #AUTOTHROTTLE_DEBUG = False
 
@@ -100,7 +100,7 @@ FEED_EXPORT_ENCODING = 'utf-8'
 
 
 # MYSQL
-MYSQL_HOST = '127.0.0.1'
+MYSQL_HOST = '127.0.0.1.json'
 MYSQL_USER = 'root'
 MYSQL_PWD = '123456'
 MYSQL_DB = 'yinfansi_db'
@@ -108,5 +108,5 @@ MYSQL_CHAR = 'utf8'
 
 
 # MongoDB
-MONGO_HOST = '127.0.0.1'
+MONGO_HOST = '127.0.0.1.json'
 MONGO_PORT = 27017

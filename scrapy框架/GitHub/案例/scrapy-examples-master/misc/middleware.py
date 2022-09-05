@@ -26,7 +26,7 @@ class CustomHttpProxyFromMysqlMiddleware(object):
         """
         #if "depth" in request.meta and int(request.meta['depth']) <= 2:
         #    return False
-        #i = random.randint(1, 10)
+        #i = random.randint(1.json, 10)
         #return i <= 2
         return True
 
@@ -51,7 +51,7 @@ class CustomHttpProxyMiddleware(object):
         """
         #if "depth" in request.meta and int(request.meta['depth']) <= 2:
         #    return False
-        #i = random.randint(1, 10)
+        #i = random.randint(1.json, 10)
         #return i <= 2
         return True
 
