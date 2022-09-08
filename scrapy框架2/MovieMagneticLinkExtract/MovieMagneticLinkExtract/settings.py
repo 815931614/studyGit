@@ -24,7 +24,28 @@ ROBOTSTXT_OBEY = False
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 32
 
+# 重新指定调度器: 启用Redis调度器存储请求队列
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 
+# 重新指定去重机制: 确保所有的爬虫通过Redis去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+# 不清除Redis队列: 暂停/恢复/断电续爬,True:不清除,False:清除
+SCHEDULER_PERSIST = True
+# 优先级队列(默认)
+CHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
+# REDIS_URL = 'redis://127.0.0.1:6379'
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+
+
+
+# mysql
+MYSQL_HOST = 3306
+MYSQL_PORT = '127.0.0.1'
+MYSQL_DATABASE = 'movie'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = '123456'
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
@@ -67,7 +88,8 @@ CONCURRENT_REQUESTS = 32
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'MovieMagneticLinkExtract.pipelines.MovieDisposeResult': 100,
-   'MovieMagneticLinkExtract.pipelines.MovieMongoDBPipeline': 200,
+   'MovieMagneticLinkExtract.pipelines.MovieRedisFilterPipeline': 200,
+   'MovieMagneticLinkExtract.pipelines.MovieMongoDBPipeline': 300,
 
 }
 

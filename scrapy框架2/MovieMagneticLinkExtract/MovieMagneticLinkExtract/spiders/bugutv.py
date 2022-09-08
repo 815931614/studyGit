@@ -8,6 +8,7 @@
 '''
 import re
 import scrapy
+from  scrapy_redis.spiders import RedisSpider
 from MovieMagneticLinkExtract.items import MoviemagneticlinkextractItem
 
 class BugutvSpider(scrapy.Spider):
@@ -15,11 +16,11 @@ class BugutvSpider(scrapy.Spider):
     name = 'bugutv'
     allowed_domains = ['www.bugutv.net']
     start_urls = [
-        'https://www.bugutv.net/4kuhd', # 4K蓝光原盘
+        # 'https://www.bugutv.net/4kuhd', # 4K蓝光原盘
         # 'https://www.bugutv.net/4kmovie', # 4K电影
         # 'https://www.bugutv.net/dolbyvision', # 杜比视界
         # 'https://www.bugutv.net/4kdocu', # 4K纪录片
-        # 'https://www.bugutv.net/bluraymovie' # 蓝光原盘
+        'https://www.bugutv.net/bluraymovie' # 蓝光原盘
     ]
 
     def parse(self, response):
@@ -77,11 +78,16 @@ class BugutvSpider(scrapy.Spider):
         # 语言
         item['language'] = re.findall(f'◎语.*?言(.*?)<br>', response.text)
 
+        urlformat = lambda url: [i for i in url.split("/") if i != ""][-1]
+
         # IMDb评分
         item['imdb_grade'] = re.findall(f'◎IMDb评分(.*?)<br>', response.text)
 
         # IMDb链接
         item['imdb_link'] = response.xpath("//div/div[3]/div[1]/p[1]/a[contains(@href,'www.imdb.com')]/text()").extract_first()
+
+        # IMDb_id
+        item['imdb_id'] = urlformat(item['imdb_link'])
 
         # 豆瓣评分
         item['douban_grade'] = re.findall(f'◎豆瓣 评分(.*?)<br>', response.text)
@@ -96,6 +102,9 @@ class BugutvSpider(scrapy.Spider):
         # 豆瓣链接
         item['douban_link'] = response.xpath("//div/div[3]/div[1]/p[1]/a[contains(@href,'movie.douban.com')]/text()").extract_first()
 
+        # douban_id
+        item['douban_id'] = urlformat(item['douban_link'])
+
         # 导演
         item['director'] = re.findall(f'◎导.*?演(.*?)<br>', response.text)
 
@@ -104,15 +113,17 @@ class BugutvSpider(scrapy.Spider):
 
         # 演员
         item['actor'] = []
+        actor = re.findall(f'◎主.*?演(.*?)</p>', response.text)
+        if actor:
+            item['actor'] = [i.strip() for i in actor[0].split("<br>")]
 
-        item['actor'] = [i.strip() for i in re.findall(f'◎主.*?演(.*?)</p>', response.text)[0].split("<br>")]
 
 
         # 简介
         item['intro'] = response.xpath('//div/div[3]/div[1]/p[3]/text()').extract()
 
         # 磁力
-        item['magnetism_link'] = ""
+        item['magnetism_link'] = response.xpath("//div/div[3]/div[1]/p/a[contains(@href,'magnet:?xt=')]/..//text()[1]").extract()
         # print(item)
         # sum
         # item['name'] = response.xpath('')

@@ -7,7 +7,6 @@ import scrapy
 
 
 class MoviemagneticlinkextractItem(scrapy.Item):
-
     # define the fields for your item here like:
 
     # 影片类型电影或剧集
@@ -46,6 +45,9 @@ class MoviemagneticlinkextractItem(scrapy.Item):
     # IMDb评分
     imdb_grade = scrapy.Field()
 
+    # IMDb id
+    imdb_id = scrapy.Field()
+
     # IMDb链接
     imdb_link = scrapy.Field()
 
@@ -76,9 +78,13 @@ class MoviemagneticlinkextractItem(scrapy.Item):
     # 磁力
     magnetism_link = scrapy.Field()
 
+    # 豆瓣id
+    douban_id = scrapy.Field()
+
+    # 是否更新磁力
+    isUpdate_magnetism_link = scrapy.Field()
+
+    # 来源
+    source = scrapy.Field()
     # sum
     # name = scrapy.Field()
-'''
-               (\w.*?) = scrapy.Field\(\)
-               item['$1'] = response.xpath("")
-               '''
