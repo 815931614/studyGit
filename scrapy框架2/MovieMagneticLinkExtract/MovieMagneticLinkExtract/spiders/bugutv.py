@@ -16,10 +16,10 @@ class BugutvSpider(scrapy.Spider):
     name = 'bugutv'
     allowed_domains = ['www.bugutv.net']
     start_urls = [
-        # 'https://www.bugutv.net/4kuhd', # 4K蓝光原盘
-        # 'https://www.bugutv.net/4kmovie', # 4K电影
-        # 'https://www.bugutv.net/dolbyvision', # 杜比视界
-        # 'https://www.bugutv.net/4kdocu', # 4K纪录片
+        'https://www.bugutv.net/4kuhd', # 4K蓝光原盘
+        'https://www.bugutv.net/4kmovie', # 4K电影
+        'https://www.bugutv.net/dolbyvision', # 杜比视界
+        'https://www.bugutv.net/4kdocu', # 4K纪录片
         'https://www.bugutv.net/bluraymovie' # 蓝光原盘
     ]
 
@@ -41,9 +41,16 @@ class BugutvSpider(scrapy.Spider):
         #     detailsLink_list[28],
         #     callback=self.parse_detail
         # )
-
-
+        next_url = response.xpath("/html/body/div[1]/main/div[2]/div[1]/div/div/div[2]/a[contains(@class,'next')]/@href").extract_first()
+        if next_url:
+            yield scrapy.Request(
+                next_url,
+                callback=self.parse
+            )
     def parse_detail(self, response):
+
+        magnet = re.findall(r'magnet:\?xt=urn:btih:', response.text)
+        if not magnet: return
         # print(response.text)
         item = MoviemagneticlinkextractItem()
 
@@ -87,7 +94,9 @@ class BugutvSpider(scrapy.Spider):
         item['imdb_link'] = response.xpath("//div/div[3]/div[1]/p[1]/a[contains(@href,'www.imdb.com')]/text()").extract_first()
 
         # IMDb_id
-        item['imdb_id'] = urlformat(item['imdb_link'])
+        item['imdb_id'] =None
+        if item['imdb_link']:
+            item['imdb_id'] = urlformat(item['imdb_link'])
 
         # 豆瓣评分
         item['douban_grade'] = re.findall(f'◎豆瓣 评分(.*?)<br>', response.text)
@@ -103,8 +112,9 @@ class BugutvSpider(scrapy.Spider):
         item['douban_link'] = response.xpath("//div/div[3]/div[1]/p[1]/a[contains(@href,'movie.douban.com')]/text()").extract_first()
 
         # douban_id
-        item['douban_id'] = urlformat(item['douban_link'])
-
+        item['douban_id'] = None
+        if item['douban_link']:
+            item['douban_id'] =  urlformat(item['douban_link'])
         # 导演
         item['director'] = re.findall(f'◎导.*?演(.*?)<br>', response.text)
 
@@ -123,9 +133,11 @@ class BugutvSpider(scrapy.Spider):
         item['intro'] = response.xpath('//div/div[3]/div[1]/p[3]/text()').extract()
 
         # 磁力
-        item['magnetism_link'] = response.xpath("//div/div[3]/div[1]/p/a[contains(@href,'magnet:?xt=')]/..//text()[1]").extract()
+
+        item['magnetism_link'] = response.xpath("//div/div[3]/div[1]/p/a[contains(@href,'magnet:?xt=')]/..//text()").extract()
         # print(item)
         # sum
         # item['name'] = response.xpath('')
-
+        if not item['old_name'] and not item['imdb_id'] and not item['douban_id']:
+            return
         yield item

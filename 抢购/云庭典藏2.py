@@ -5,8 +5,8 @@ import requests
 from urllib.parse import urlencode
 from copy import deepcopy
 authorization_list = {
-    '18986680202' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjE4Nzg0NywiZXhwIjoxODc4MTg3ODQ3LCJuYmYiOjE2NjIxODc4NDcsImp0aSI6IkF2WUliaTZvaFI4SzRCQzgiLCJzdWIiOiIzMTU3OSIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.WN96A4yFpyZwFCp5vCbUdkoM4tdx2TWTAwfmH1C52rc',
-    '17683866129' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjIwNDM3MCwiZXhwIjoxODc4MjA0MzcwLCJuYmYiOjE2NjIyMDQzNzAsImp0aSI6ImlycVlLM3I5Y2dFOUhkc04iLCJzdWIiOiIzMTcxNCIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.TFRC09Q01Wm4YW9-pPveQwbdrhwTJJitNYLNoSkgktI'
+    '18986680202' : 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjQ0Mjk1MSwibmJmIjoxNjYyNDQyOTUxLCJqdGkiOiJLUlViYlZ6OUh0NXh1N2VVIiwic3ViIjozMTgyMSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.7cHeKTGkaZvLxEt1R3wYmLcBf3305ZU2osRhJZcO14c',
+    '17683866129' : 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjYxOTYxMCwibmJmIjoxNjYyNjE5NjEwLCJqdGkiOiI1aEcwcnQ4enpyS3JYeVZiIiwic3ViIjo5NjM5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.sBoc48OA0MchhiXTr1KZpK6DzLEiWi5dZ80pHFk_MIQ'
 }
 
 order_list = {
@@ -51,7 +51,7 @@ class qianggou:
         res = requests.post(url,
             headers={
                 'accept': '*/*',
-                'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjQ0MTg4MywibmJmIjoxNjYyNDQxODgzLCJqdGkiOiJGcUlTSlpPYkwzNjNaMERPIiwic3ViIjozMTA4NywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.GiV0HpeIVgKm81hFBAfgg39o1ia7nd967Sj9_M33oew',
+                'authorization': authorization,
                 'cache-control': 'no-cache',
                 'content-length': '333',
                 'content-type': 'application/json',

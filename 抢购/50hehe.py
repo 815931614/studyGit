@@ -4,8 +4,8 @@ import time
 import requests
 from urllib.parse import urlencode
 authorization_list = {
-    '18986680202' : 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjQ0Mjk1MSwibmJmIjoxNjYyNDQyOTUxLCJqdGkiOiJLUlViYlZ6OUh0NXh1N2VVIiwic3ViIjozMTgyMSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.7cHeKTGkaZvLxEt1R3wYmLcBf3305ZU2osRhJZcO14c',
-    '17683866129' : 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjYxOTYxMCwibmJmIjoxNjYyNjE5NjEwLCJqdGkiOiI1aEcwcnQ4enpyS3JYeVZiIiwic3ViIjo5NjM5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.sBoc48OA0MchhiXTr1KZpK6DzLEiWi5dZ80pHFk_MIQ'
+    '18986680202' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjE4Nzg0NywiZXhwIjoxODc4MTg3ODQ3LCJuYmYiOjE2NjIxODc4NDcsImp0aSI6IkF2WUliaTZvaFI4SzRCQzgiLCJzdWIiOiIzMTU3OSIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.WN96A4yFpyZwFCp5vCbUdkoM4tdx2TWTAwfmH1C52rc',
+    '17683866129' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjIwNDM3MCwiZXhwIjoxODc4MjA0MzcwLCJuYmYiOjE2NjIyMDQzNzAsImp0aSI6ImlycVlLM3I5Y2dFOUhkc04iLCJzdWIiOiIzMTcxNCIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.TFRC09Q01Wm4YW9-pPveQwbdrhwTJJitNYLNoSkgktI'
 }
 
 
@@ -29,7 +29,7 @@ class qianggou:
     def run(self,authorization,name):
 
         while True:
-            if int(time.time() * 1000) > 1662620395000:
+            if int(time.time() * 1000) > 1662206395000:
                 time.sleep(.1)
                 break
         ip = self.getIp()
@@ -39,6 +39,16 @@ class qianggou:
             try:
                 # 1662206770930561  1662206770549568  1662206781243549  1662206785847380
                 orderId = self.createOrder(authorization,name,ip)
+                if orderId:
+                   self.isSuccess['name'] = True
+                   while True:
+                       try:
+                           extractPayLink = self.extractPayLink(orderId, authorization,name,ip)
+                           if extractPayLink:
+                               break
+                       except:
+                           ip = self.getIp()
+                   break
             except:
                 ip = self.getIp()
 
@@ -80,38 +90,38 @@ class qianggou:
 
 
 
-        url = 'https://api.taohuan.life/api/cang/create'
-
+        url = 'http://www.50hehe.com/data/api.auth.collection/buy'
+        '''
+        id=89&RandStr=%40G74&Ticket=t03ugixHT6x49pW1NZl0zevrmHr3BSc3z9DzbhHKHBVunJbHBLB6m9gYy4s7d2HEwBTdA4bHzArDaWe4fvtIzbFp0K8vxiCR5SiqQ7OcZ_XqLL3_CRL-sBGqyzIwSDfWzxLbHBaL4DQpeY*&time=1662647526377&sign=28EB327E5959A3BF499E3583CBA535A3
+        
+        '''
         res = requests.post(url,
             headers={
 
                 'accept': '*/*',
                 'authorization': authorization,
                 'cache-control': 'no-cache',
-                'content-length': '333',
                 'content-type': 'application/json',
-                'origin': 'https://web.taohuan.life',
-                'platform': 'h5',
+                'origin': 'http://h5.markartgo.com',
                 'pragma': 'no-cache',
-                'referer': 'https://web.taohuan.life/',
-                'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-                'sec-ch-ua-mobile': '?0',
-                'sec-ch-ua-platform': '"Windows"',
+                'referer': 'http://h5.markartgo.com/',
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
-                'sec-fetch-site': 'same-site',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
-
+                'sec-fetch-site': 'cross-site',
+                'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.json.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1.json',
             },
-            json = {"id":9,"token":authorization},
+            json = {
+
+                id=89&RandStr=%40G74&Ticket=t03ugixHT6x49pW1NZl0zevrmHr3BSc3z9DzbhHKHBVunJbHBLB6m9gYy4s7d2HEwBTdA4bHzArDaWe4fvtIzbFp0K8vxiCR5SiqQ7OcZ_XqLL3_CRL-sBGqyzIwSDfWzxLbHBaL4DQpeY*&time=1662647526377&sign=28EB327E5959A3BF499E3583CBA535A3
+            },
             timeout=3,
             proxies=ip
          )
-        # {"status_code":200,"data":"https:\/\/sandcash.mixienet.com.cn\/pay\/h5\/quicktopup?version=10&mer_no=6888806046047&mer_key=8TUMCGZGegbofbduWflXVl2SpwlR7ywQ968oUipjqCQzYC3Ka0bNb51fMAQndy7pKJiIBlHO55s%3D&mer_order_no=2022090613260234895&create_time=20220906132602&expire_time=20220906135602&order_amt=1.00&notify_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fsdpay&return_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fpaysuccess&create_ip=117.152.93.117&goods_name=%E5%95%86%E5%93%81%E8%B4%AD%E4%B9%B0&store_id=000000&product_code=06030003&clear_cycle=3&pay_extra=%7B%22userId%22%3A%2231087%22%2C%22userName%22%3A%22%5Cu674e%5Cu798f%5Cu6210%22%2C%22idCard%22%3A%22421003199906082911%22%7D&accsplit_flag=NO&jump_scheme=sandcash%3A%2F%2Fscpay&meta_option=%5B%7B%22s%22%3A%22Android%22%2C%22n%22%3A%22wxDemo%22%2C%22id%22%3A%22com.pay.paytypetest%22%2C%22sc%22%3A%22com.pay.paytypetest%22%7D%5D&sign_type=MD5&sign=5DF93FDA9399AB5210EB831F196CB1D9","message":"https:\/\/sandcash.mixienet.com.cn\/pay\/h5\/quicktopup?version=10&mer_no=6888806046047&mer_key=8TUMCGZGegbofbduWflXVl2SpwlR7ywQ968oUipjqCQzYC3Ka0bNb51fMAQndy7pKJiIBlHO55s%3D&mer_order_no=2022090613260234895&create_time=20220906132602&expire_time=20220906135602&order_amt=1.00&notify_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fsdpay&return_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fpaysuccess&create_ip=117.152.93.117&goods_name=%E5%95%86%E5%93%81%E8%B4%AD%E4%B9%B0&store_id=000000&product_code=06030003&clear_cycle=3&pay_extra=%7B%22userId%22%3A%2231087%22%2C%22userName%22%3A%22%5Cu674e%5Cu798f%5Cu6210%22%2C%22idCard%22%3A%22421003199906082911%22%7D&accsplit_flag=NO&jump_scheme=sandcash%3A%2F%2Fscpay&meta_option=%5B%7B%22s%22%3A%22Android%22%2C%22n%22%3A%22wxDemo%22%2C%22id%22%3A%22com.pay.paytypetest%22%2C%22sc%22%3A%22com.pay.paytypetest%22%7D%5D&sign_type=MD5&sign=5DF93FDA9399AB5210EB831F196CB1D9"}
+
         print(name,res.json())
-        # if res.json()['message'] == "下单成功":
-        #
-        #     return res.json()['data']['order_no']
+        if res.json()['message'] == "下单成功":
+
+            return res.json()['data']['order_no']
 
     def getIp(self):
         # url = 'http://api1.ydaili.cn/tools/BMeasureApi.ashx?action=BEAPI&secret=A93A19D427639C4C85BC8F1E0BE70F0CCF045BE529A547CCCEC1125E4A14B56C060AE56D7625D8AF&number=1&orderId=SH20220508203700211&format=txt'

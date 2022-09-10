@@ -12,4 +12,5 @@
 
 from scrapy import cmdline
 
-cmdline.execute("scrapy crawl bugutv".split())
+# cmdline.execute("scrapy crawl bugutv".split())
+cmdline.execute("scrapy crawl yinfans".split())

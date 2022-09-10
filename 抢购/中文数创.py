@@ -4,8 +4,8 @@ import time
 import requests
 from urllib.parse import urlencode
 authorization_list = {
-    '18986680202' : 'JSESSIONID=594257D31BECCA421599CBB58B27955F; SERVERID=e62a1048fe482f3fd09489753e9e7159|1662713810|1662713724',
-    '17683866129' : 'JSESSIONID=835647D745A569292593692AD81BEF69; SERVERID=fb60e654e31aa68847ac6ab39f771d46|1662713811|1662713780'
+    '18986680202' : 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjQ0Mjk1MSwibmJmIjoxNjYyNDQyOTUxLCJqdGkiOiJLUlViYlZ6OUh0NXh1N2VVIiwic3ViIjozMTgyMSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.7cHeKTGkaZvLxEt1R3wYmLcBf3305ZU2osRhJZcO14c',
+    '17683866129' : 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnRhb2h1YW4ubGlmZVwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTY2MjYxOTYxMCwibmJmIjoxNjYyNjE5NjEwLCJqdGkiOiI1aEcwcnQ4enpyS3JYeVZiIiwic3ViIjo5NjM5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.sBoc48OA0MchhiXTr1KZpK6DzLEiWi5dZ80pHFk_MIQ'
 }
 
 
@@ -18,7 +18,7 @@ class qianggou:
         self.isSuccess = {}
     def createThread(self):
         self.thread_list = []
-        for i in  range(5):
+        for i in  range(20):
             for name,auth in self.authorization_list.items():
                 self.isSuccess[name] = False
                 t = Thread(target=self.run,args=(auth,name))
@@ -29,7 +29,7 @@ class qianggou:
     def run(self,authorization,name):
 
         while True:
-            if int(time.time() * 1000) > 1662713995000:
+            if int(time.time() * 1000) > 1662620395000:
                 time.sleep(.1)
                 break
         ip = self.getIp()
@@ -78,24 +78,33 @@ class qianggou:
 
     def createOrder(self,authorization,name,ip):
 
-        url = 'http://www.zihesc.com/api/payRecords/getOrder'
+
+
+        url = 'https://nft.zhongke.art/api/collection/buy'
 
         res = requests.post(url,
             headers={
 
                 'Accept': '*/*',
+                'Authorization': authorization,
                 'Cache-Control': 'no-cache',
                 'Connection': 'keep-alive',
-                'Content-Length': '5',
-                'content-type': 'application/x-www-form-urlencoded',
-                'Cookie': authorization,
-                'Host': 'www.zihesc.com',
-                'Origin': 'http://www.zihesc.com',
+                'Content-Length': '38',
+                'Content-Type': 'application/json',
+                'Host': 'nft.zhongke.art',
+                'Origin': 'https://nft.zhongke.art',
                 'Pragma': 'no-cache',
-                'Referer': 'http://www.zihesc.com/',
+                'Referer': 'https://nft.zhongke.art/?code=091nWI100JY0xO1C77000INvRZ1nWI1e&state=1',
+                'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"Windows"',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
+
             },
-            data = urlencode(dict(id=72)),
+            json = {"collectionId":"1567874539514073088"},
             timeout=3,
             proxies=ip
          )
@@ -110,10 +119,10 @@ class qianggou:
         # ip = requests.get(url).text
         # print(ip.strip())
         return None
-        # return {
-        #     "https":  ip.strip(),
-        #     "http":  ip.strip()
-        # }
+        return {
+            "https":  ip.strip(),
+            "http":  ip.strip()
+        }
 
 if __name__ == '__main__':
 

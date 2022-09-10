@@ -41,8 +41,8 @@ REDIS_PORT = 6379
 
 
 # mysql
-MYSQL_HOST = 3306
-MYSQL_PORT = '127.0.0.1'
+MYSQL_HOST = '127.0.0.1'
+MYSQL_PORT = 3306
 MYSQL_DATABASE = 'movie'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = '123456'
@@ -89,7 +89,8 @@ MYSQL_PASSWORD = '123456'
 ITEM_PIPELINES = {
    'MovieMagneticLinkExtract.pipelines.MovieDisposeResult': 100,
    'MovieMagneticLinkExtract.pipelines.MovieRedisFilterPipeline': 200,
-   'MovieMagneticLinkExtract.pipelines.MovieMongoDBPipeline': 300,
+   'MovieMagneticLinkExtract.pipelines.MovieMysqlPipeline': 300,
+   'MovieMagneticLinkExtract.pipelines.MovieMongoDBPipeline': 400,
 
 }
 

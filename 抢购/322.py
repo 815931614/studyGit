@@ -4,8 +4,8 @@ import time
 import requests
 from urllib.parse import urlencode
 authorization_list = {
-    '18986680202' : 'JSESSIONID=594257D31BECCA421599CBB58B27955F; SERVERID=e62a1048fe482f3fd09489753e9e7159|1662713810|1662713724',
-    '17683866129' : 'JSESSIONID=835647D745A569292593692AD81BEF69; SERVERID=fb60e654e31aa68847ac6ab39f771d46|1662713811|1662713780'
+    '18986680202' : 'c02646ba-91aa-4ae2-a189-dd9084bfadc7',
+    # '17683866129' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjIwNDM3MCwiZXhwIjoxODc4MjA0MzcwLCJuYmYiOjE2NjIyMDQzNzAsImp0aSI6ImlycVlLM3I5Y2dFOUhkc04iLCJzdWIiOiIzMTcxNCIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.TFRC09Q01Wm4YW9-pPveQwbdrhwTJJitNYLNoSkgktI'
 }
 
 
@@ -18,7 +18,7 @@ class qianggou:
         self.isSuccess = {}
     def createThread(self):
         self.thread_list = []
-        for i in  range(5):
+        for i in  range(100):
             for name,auth in self.authorization_list.items():
                 self.isSuccess[name] = False
                 t = Thread(target=self.run,args=(auth,name))
@@ -29,7 +29,7 @@ class qianggou:
     def run(self,authorization,name):
 
         while True:
-            if int(time.time() * 1000) > 1662713995000:
+            if int(time.time() * 1000) > 1662206395000:
                 time.sleep(.1)
                 break
         ip = self.getIp()
@@ -39,6 +39,7 @@ class qianggou:
             try:
                 # 1662206770930561  1662206770549568  1662206781243549  1662206785847380
                 orderId = self.createOrder(authorization,name,ip)
+
             except:
                 ip = self.getIp()
 
@@ -78,42 +79,42 @@ class qianggou:
 
     def createOrder(self,authorization,name,ip):
 
-        url = 'http://www.zihesc.com/api/payRecords/getOrder'
 
-        res = requests.post(url,
+
+        url = 'http://m.322meta.art/api/nft.pay/checkCollection?collection_id=104'
+
+        res = requests.get(url,
             headers={
-
                 'Accept': '*/*',
                 'Cache-Control': 'no-cache',
                 'Connection': 'keep-alive',
-                'Content-Length': '5',
-                'content-type': 'application/x-www-form-urlencoded',
-                'Cookie': authorization,
-                'Host': 'www.zihesc.com',
-                'Origin': 'http://www.zihesc.com',
+                'Content-type': 'application/json;charset=utf-8',
+                'Host': 'm.322meta.art',
+                'loginip': '16626978146985827946',
                 'Pragma': 'no-cache',
-                'Referer': 'http://www.zihesc.com/',
+                'Referer': 'http://m.322meta.art/h5/',
+                'token': authorization,
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
             },
-            data = urlencode(dict(id=72)),
+
             timeout=3,
             proxies=ip
          )
-        # {"status_code":200,"data":"https:\/\/sandcash.mixienet.com.cn\/pay\/h5\/quicktopup?version=10&mer_no=6888806046047&mer_key=8TUMCGZGegbofbduWflXVl2SpwlR7ywQ968oUipjqCQzYC3Ka0bNb51fMAQndy7pKJiIBlHO55s%3D&mer_order_no=2022090613260234895&create_time=20220906132602&expire_time=20220906135602&order_amt=1.00&notify_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fsdpay&return_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fpaysuccess&create_ip=117.152.93.117&goods_name=%E5%95%86%E5%93%81%E8%B4%AD%E4%B9%B0&store_id=000000&product_code=06030003&clear_cycle=3&pay_extra=%7B%22userId%22%3A%2231087%22%2C%22userName%22%3A%22%5Cu674e%5Cu798f%5Cu6210%22%2C%22idCard%22%3A%22421003199906082911%22%7D&accsplit_flag=NO&jump_scheme=sandcash%3A%2F%2Fscpay&meta_option=%5B%7B%22s%22%3A%22Android%22%2C%22n%22%3A%22wxDemo%22%2C%22id%22%3A%22com.pay.paytypetest%22%2C%22sc%22%3A%22com.pay.paytypetest%22%7D%5D&sign_type=MD5&sign=5DF93FDA9399AB5210EB831F196CB1D9","message":"https:\/\/sandcash.mixienet.com.cn\/pay\/h5\/quicktopup?version=10&mer_no=6888806046047&mer_key=8TUMCGZGegbofbduWflXVl2SpwlR7ywQ968oUipjqCQzYC3Ka0bNb51fMAQndy7pKJiIBlHO55s%3D&mer_order_no=2022090613260234895&create_time=20220906132602&expire_time=20220906135602&order_amt=1.00&notify_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fsdpay&return_url=https%3A%2F%2Fweb.taohuan.life%2Fnotify%2Fpaysuccess&create_ip=117.152.93.117&goods_name=%E5%95%86%E5%93%81%E8%B4%AD%E4%B9%B0&store_id=000000&product_code=06030003&clear_cycle=3&pay_extra=%7B%22userId%22%3A%2231087%22%2C%22userName%22%3A%22%5Cu674e%5Cu798f%5Cu6210%22%2C%22idCard%22%3A%22421003199906082911%22%7D&accsplit_flag=NO&jump_scheme=sandcash%3A%2F%2Fscpay&meta_option=%5B%7B%22s%22%3A%22Android%22%2C%22n%22%3A%22wxDemo%22%2C%22id%22%3A%22com.pay.paytypetest%22%2C%22sc%22%3A%22com.pay.paytypetest%22%7D%5D&sign_type=MD5&sign=5DF93FDA9399AB5210EB831F196CB1D9"}
+        # {"code":0,"msg":"抢购暂未开始！","time":"1662698164","data":null}
         print(name,res.json())
-        # if res.json()['message'] == "下单成功":
-        #
-        #     return res.json()['data']['order_no']
+        if res.json()['message'] == "下单成功":
+
+            return res.json()['data']['order_no']
 
     def getIp(self):
         # url = 'http://api1.ydaili.cn/tools/BMeasureApi.ashx?action=BEAPI&secret=A93A19D427639C4C85BC8F1E0BE70F0CCF045BE529A547CCCEC1125E4A14B56C060AE56D7625D8AF&number=1&orderId=SH20220508203700211&format=txt'
         # ip = requests.get(url).text
         # print(ip.strip())
         return None
-        # return {
-        #     "https":  ip.strip(),
-        #     "http":  ip.strip()
-        # }
+        return {
+            "https":  ip.strip(),
+            "http":  ip.strip()
+        }
 
 if __name__ == '__main__':
 

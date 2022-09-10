@@ -24,27 +24,27 @@
 ```sql
 create table translatedInfo(
 	id int primary key auto_increment, # id
-    cover_Image varchar(100),# 影片封面
-    title varchar(50), # 影片标题介绍
-    translated_name varchar(50), # 影片译名
-    old_name varchar(50), # 影片原名
+    cover_Image varchar(120),# 影片封面
+    title varchar(255), # 影片标题介绍
+    translated_name varchar(255), # 影片译名
+    old_name varchar(255), # 影片原名
     country varchar(15),# 产地
     years varchar(10), # 年代
     release_date varchar(20), # 上映日期
-    category varchar(30), # 类别
-    duration varchar(10), # 影片时长
-    language varchar(10), # 语言
-    imdb_grade varchar(20),# IMDb评分
-    imdb_id varchar(15),# IMDb id
-    imdb_link varchar(50), # IMDb链接
-    douban_grade varchar(20), # 豆瓣评分
-    douban_id varchar(15), # 豆瓣id
-    douban_link varchar(50),# 豆瓣链接
-    rottenTomatoes varchar(20),  #烂 番 茄
-    metacritic varchar(20),#Metacritic 
-    director varchar(30),  # 导演
-    scriptwriter varchar(30),# 编剧
-    actor varchar(255), # 演员
+    category varchar(50), # 类别
+    duration varchar(20), # 影片时长
+    language varchar(50), # 语言
+    imdb_grade varchar(100),# IMDb评分
+    imdb_id varchar(130),# IMDb id
+    imdb_link varchar(100), # IMDb链接
+    douban_grade varchar(50), # 豆瓣评分
+    douban_id varchar(100), # 豆瓣id
+    douban_link varchar(100),# 豆瓣链接
+    rottenTomatoes varchar(60),  #烂 番 茄
+    metacritic varchar(50),#Metacritic 
+    director varchar(100),  # 导演
+    scriptwriter varchar(200),# 编剧
+    actor text, # 演员
     intro text, # 简介
     source varchar(20) # 来源
 );

@@ -54,6 +54,9 @@ class MoviemagneticlinkextractItem(scrapy.Item):
     # 豆瓣评分
     douban_grade = scrapy.Field()
 
+    # 豆瓣id
+    douban_id = scrapy.Field()
+
     # 豆瓣链接
     douban_link = scrapy.Field()
 
@@ -75,16 +78,13 @@ class MoviemagneticlinkextractItem(scrapy.Item):
     # 简介
     intro = scrapy.Field()
 
+    # 来源
+    source = scrapy.Field()
+
     # 磁力
     magnetism_link = scrapy.Field()
 
-    # 豆瓣id
-    douban_id = scrapy.Field()
-
     # 是否更新磁力
     isUpdate_magnetism_link = scrapy.Field()
-
-    # 来源
-    source = scrapy.Field()
     # sum
     # name = scrapy.Field()
