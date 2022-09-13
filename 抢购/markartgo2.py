@@ -5,12 +5,12 @@ import requests
 from urllib.parse import urlencode
 from copy import deepcopy
 authorization_list = {
-    '18986680202' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjE4Nzg0NywiZXhwIjoxODc4MTg3ODQ3LCJuYmYiOjE2NjIxODc4NDcsImp0aSI6IkF2WUliaTZvaFI4SzRCQzgiLCJzdWIiOiIzMTU3OSIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.WN96A4yFpyZwFCp5vCbUdkoM4tdx2TWTAwfmH1C52rc',
-    '17683866129' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjIwNDM3MCwiZXhwIjoxODc4MjA0MzcwLCJuYmYiOjE2NjIyMDQzNzAsImp0aSI6ImlycVlLM3I5Y2dFOUhkc04iLCJzdWIiOiIzMTcxNCIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.TFRC09Q01Wm4YW9-pPveQwbdrhwTJJitNYLNoSkgktI'
+    '18986680202' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2Mjk3MzkzNywiZXhwIjoxODc4OTczOTM3LCJuYmYiOjE2NjI5NzM5MzcsImp0aSI6Im1wdTd5Q1RMckRhTEdhTDIiLCJzdWIiOiIzMTU3OSIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.0iG16I180hYUJjt-OuCLTAa8WEmJt4u5GsEweU50d28',
+    # '17683866129' : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5tYXJrYXJ0Z28uY29tL2FwaS9hdXRoL2xvZ2luUGFzcyIsImlhdCI6MTY2MjIwNDM3MCwiZXhwIjoxODc4MjA0MzcwLCJuYmYiOjE2NjIyMDQzNzAsImp0aSI6ImlycVlLM3I5Y2dFOUhkc04iLCJzdWIiOiIzMTcxNCIsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEiLCJyb2xlIjoidXNlciJ9.TFRC09Q01Wm4YW9-pPveQwbdrhwTJJitNYLNoSkgktI'
 }
 
 order_list = {
-    '18986680202' : [],
+    '18986680202' : ['1202209121714074510598144'],
     '17683866129' : []
 }
 
@@ -22,6 +22,7 @@ class qianggou:
         self.createLock = RLock()
         self.isSuccess = {}
         self.orderList = order_list
+
     def createThread(self):
         self.thread_list = []
 
@@ -121,7 +122,7 @@ if __name__ == '__main__':
 
     # print(a.getIp())
 
-
+    # a.createThread()
 
     while True:
         try:

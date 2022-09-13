@@ -2,29 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e94f84-8b5c-4f5d-b79c-246cdac005f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/request_demo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/322.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/50hehe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/caihong.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/hopeArt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/nbkongjian.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/zz.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/中文数创.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/大陆.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/抢购/黑马.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium_demo/bilibili/bilibili.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium_demo/bilibili/chrome.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/抢购/12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/抢购/ametays.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/抢购/jinyuanshucang.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/抢购/qingyouhn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyNote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyNote.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/bugutv.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/bugutv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy框架2/cf.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy框架2/cf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/抢购/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/抢购/云庭典藏.py" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/云庭典藏.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/抢购/云庭典藏2.py" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/云庭典藏2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/抢购/紫核.py" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/紫核.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/抢购/markartgo.py" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/markartgo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/抢购/markartgo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/markartgo2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/抢购/zz.py" beforeDir="false" afterPath="$PROJECT_DIR$/抢购/zz.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,96 +26,115 @@
     <SUITE FILE_PATH="coverage/MyNote$nbkongjian.coverage" NAME="nbkongjian Coverage Results" MODIFIED="1662710395744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
     <SUITE FILE_PATH="coverage/MyNote$settings.coverage" NAME="settings Coverage Results" MODIFIED="1662468943232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract" />
     <SUITE FILE_PATH="coverage/MyNote$code05.coverage" NAME="code05 Coverage Results" MODIFIED="1662189781523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/多任务编程多线程/Day01" />
-    <SUITE FILE_PATH="coverage/MyNote$markartgo2.coverage" NAME="markartgo2 Coverage Results" MODIFIED="1662210824522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
-    <SUITE FILE_PATH="coverage/MyNote$zz.coverage" NAME="zz Coverage Results" MODIFIED="1662786795361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
+    <SUITE FILE_PATH="coverage/MyNote$markartgo2.coverage" NAME="markartgo2 Coverage Results" MODIFIED="1662984202391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
+    <SUITE FILE_PATH="coverage/MyNote$zz.coverage" NAME="zz Coverage Results" MODIFIED="1662989931344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
     <SUITE FILE_PATH="coverage/MyNote$zysz.coverage" NAME="zysz Coverage Results" MODIFIED="1662293509490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
     <SUITE FILE_PATH="coverage/MyNote$run.coverage" NAME="run Coverage Results" MODIFIED="1662295383330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2/jdbookRedis" />
     <SUITE FILE_PATH="coverage/MyNote$test.coverage" NAME="test Coverage Results" MODIFIED="1662728516590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract" />
     <SUITE FILE_PATH="coverage/MyNote$.coverage" NAME="紫核 Coverage Results" MODIFIED="1662714299416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
     <SUITE FILE_PATH="coverage/MyNote$hopeArt.coverage" NAME="hopeArt Coverage Results" MODIFIED="1662701894056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
-    <SUITE FILE_PATH="coverage/MyNote$markartgo.coverage" NAME="markartgo Coverage Results" MODIFIED="1662207320749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
+    <SUITE FILE_PATH="coverage/MyNote$markartgo.coverage" NAME="markartgo Coverage Results" MODIFIED="1662987074045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
     <SUITE FILE_PATH="coverage/MyNote$bugutv.coverage" NAME="bugutv Coverage Results" MODIFIED="1662395913448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders" />
     <SUITE FILE_PATH="coverage/MyNote$322.coverage" NAME="322 Coverage Results" MODIFIED="1662714599150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
+    <SUITE FILE_PATH="coverage/MyNote$bilibili.coverage" NAME="bilibili Coverage Results" MODIFIED="1662971864267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium_demo/bilibili" />
     <SUITE FILE_PATH="coverage/MyNote$yinfans.coverage" NAME="yinfans Coverage Results" MODIFIED="1662703077669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders" />
     <SUITE FILE_PATH="coverage/MyNote$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1662732481114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract" />
     <SUITE FILE_PATH="coverage/MyNote$cf.coverage" NAME="cf Coverage Results" MODIFIED="1662727718443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy框架2" />
+    <SUITE FILE_PATH="coverage/MyNote$qingyouhn.coverage" NAME="qingyouhn Coverage Results" MODIFIED="1662958799583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
     <SUITE FILE_PATH="coverage/MyNote$synbox.coverage" NAME="synbox Coverage Results" MODIFIED="1662374220016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/抢购" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/chrome.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/bilibili.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1558">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
+              <folding>
+                <element signature="e#129#158#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/抢购/zz.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+              <folding>
+                <element signature="e#123#138#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/yinfans.py">
+        <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+            <state relative-caret-position="456">
+              <caret line="24" column="80" lean-forward="true" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#145#171#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/bugutv.py">
+        <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding>
-                <element signature="e#122#131#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="547">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MySQL/笔记.txt.bak">
+        <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/items.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="437">
-                <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/抢购/markartgo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/middlewares.py">
+        <entry file="file://$PROJECT_DIR$/抢购/markartgo2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="1463">
+              <caret line="81" column="78" selection-start-line="81" selection-start-column="78" selection-end-line="81" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/test.py">
+        <entry file="file://$PROJECT_DIR$/抢购/ametays.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="5" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/抢购/1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="128" selection-end-line="12" selection-end-column="128" />
+            <state relative-caret-position="1235">
+              <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -187,7 +196,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/抢购/1" />
-        <option value="$PROJECT_DIR$/抢购/markartgo.py" />
         <option value="$PROJECT_DIR$/scrapy框架/分布式爬虫笔记.txt" />
         <option value="$PROJECT_DIR$/scrapy框架2/jdbookRedis/jdbookRedis/spiders/book.py" />
         <option value="$PROJECT_DIR$/scrapy框架2/jdbookRedis/jdbookRedis/settings.py" />
@@ -195,7 +203,6 @@
         <option value="$PROJECT_DIR$/scrapy框架2/jdbookRedis/jdbookRedis/items.py" />
         <option value="$PROJECT_DIR$/抢购/zysz.py" />
         <option value="$PROJECT_DIR$/scrapy框架2/jdbookRedis/jdbookRedis/spiders/amazon.py" />
-        <option value="$PROJECT_DIR$/抢购/markartgo2.py" />
         <option value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/1.py" />
         <option value="$PROJECT_DIR$/抢购/synbox.py" />
         <option value="$PROJECT_DIR$/抢购/幻海支付.py" />
@@ -225,17 +232,28 @@
         <option value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/movie.sql" />
         <option value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/run.py" />
         <option value="$PROJECT_DIR$/request_demo.py" />
-        <option value="$PROJECT_DIR$/抢购/1.json" />
-        <option value="$PROJECT_DIR$/抢购/zz.py" />
         <option value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/yinfans.py" />
+        <option value="$PROJECT_DIR$/抢购/jinyuanshucang.py" />
+        <option value="$PROJECT_DIR$/抢购/12.py" />
+        <option value="$PROJECT_DIR$/抢购/ametays.py" />
+        <option value="$PROJECT_DIR$/selenium_demo/demo.py" />
+        <option value="$PROJECT_DIR$/练习/笔记.md" />
+        <option value="$PROJECT_DIR$/练习/网易有道/demo.py" />
+        <option value="$PROJECT_DIR$/抢购/1.json" />
+        <option value="$PROJECT_DIR$/抢购/qingyouhn.py" />
+        <option value="$PROJECT_DIR$/selenium_demo/bilibili/chrome.py" />
+        <option value="$PROJECT_DIR$/selenium_demo/bilibili/bilibili.py" />
+        <option value="$PROJECT_DIR$/抢购/markartgo2.py" />
+        <option value="$PROJECT_DIR$/抢购/markartgo.py" />
+        <option value="$PROJECT_DIR$/抢购/zz.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1389" />
-    <option name="y" value="486" />
+    <option name="x" value="-224" />
+    <option name="y" value="183" />
     <option name="width" value="2560" />
-    <option name="height" value="1328" />
+    <option name="height" value="1304" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -252,7 +270,41 @@
             <path>
               <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyNote" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNote" type="462c0819:PsiDirectoryNode" />
               <item name="scrapy框架2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNote" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapy框架2" type="462c0819:PsiDirectoryNode" />
+              <item name="downloadmiddlewaresDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNote" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapy框架2" type="462c0819:PsiDirectoryNode" />
+              <item name="downloadmiddlewaresDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="downloadmiddlewaresDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNote" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNote" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="bilibili" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNote" type="462c0819:PsiDirectoryNode" />
+              <item name="抢购" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,11 +321,12 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\MyNote\scrapy框架2\MovieMagneticLinkExtract" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MyNote\抢购" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyNote\selenium_demo\bilibili" />
+      <recent name="D:\MyNote\scrapy框架2\MovieMagneticLinkExtract" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -289,72 +342,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.zz">
-    <configuration name="322" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MyNote" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/抢购" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/抢购/322.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="云庭典藏" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MyNote" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/抢购" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/抢购/云庭典藏.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="紫核" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MyNote" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/抢购" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/抢购/紫核.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="幻海" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyNote" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -421,7 +408,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bilibili" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyNote" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -429,12 +416,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy框架2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium_demo/bilibili" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy框架2/cf.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selenium_demo/bilibili/bilibili.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -443,7 +430,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="markartgo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyNote" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -451,12 +438,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/抢购" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/抢购/markartgo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -465,7 +452,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="markartgo2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyNote" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -473,12 +460,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/抢购" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/抢购/markartgo2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="qingyouhn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MyNote" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/抢购" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/抢购/qingyouhn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -512,10 +521,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.zz" />
-        <item itemvalue="Python.run (1)" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.cf" />
-        <item itemvalue="Python.322" />
+        <item itemvalue="Python.markartgo" />
+        <item itemvalue="Python.markartgo2" />
+        <item itemvalue="Python.bilibili" />
+        <item itemvalue="Python.qingyouhn" />
       </list>
     </recent_temporary>
   </component>
@@ -538,12 +547,16 @@
       <workItem from="1662610732418" duration="1853000" />
       <workItem from="1662614011794" duration="27764000" />
       <workItem from="1662695408730" duration="36478000" />
-      <workItem from="1662784266007" duration="4828000" />
+      <workItem from="1662784266007" duration="15896000" />
+      <workItem from="1662869512293" duration="6972000" />
+      <workItem from="1662955722806" duration="155000" />
+      <workItem from="1662956002917" duration="18254000" />
+      <workItem from="1663040979394" duration="1261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196030000" />
+    <option name="totallyTimeSpent" value="233740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,15 +568,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="956" y="361" width="2560" height="1328" extended-state="0" />
+    <frame x="-224" y="183" width="2560" height="1304" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4986911" visible="true" weight="0.1056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4986911" visible="true" weight="0.078" />
       <window_info id="Structure" order="1" sideWeight="0.5006553" side_tool="true" weight="0.25708604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295626" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.09631491" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3984064" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5012407" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988802" />
@@ -607,108 +620,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scrapy框架/中间件/Baidu/Baidu/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Python38/Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1545">
-          <caret line="1463" selection-start-line="1463" selection-end-line="1463" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis/day2/02_hash.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis/day2/01_redis_count.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Python38/Lib/site-packages/redis/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="733" selection-start-line="733" selection-end-line="733" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Python38/Lib/site-packages/scrapy/crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/宙一.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Python38/Lib/site-packages/pymongo/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="486" selection-start-line="486" selection-end-line="486" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/markartgo2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1787">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-          <folding>
-            <element signature="e#1#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/秘藏.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/星链.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#145#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MySQL/Python_MySql/5、二进制文件存储.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Python38/Lib/site-packages/scrapy/item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/Model.py" />
     <entry file="file://$PROJECT_DIR$/MySQL/Python_MySql/6、随机数据插入.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -734,13 +645,6 @@
           <folding>
             <element signature="e#1#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/caihong.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -820,20 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/markartgo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="55" lean-forward="true" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/云庭典藏.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="17" column="27" lean-forward="true" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/抢购/大陆.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -858,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/50hehe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1881">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy框架2/cf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -872,16 +755,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/request_demo.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="128" selection-end-line="12" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/request_demo.py" />
     <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -889,40 +763,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/抢购/zz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="43" column="104" selection-start-line="43" selection-start-column="104" selection-end-line="43" selection-end-column="104" />
-          <folding>
-            <element signature="e#123#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="437">
-            <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MySQL/笔记.txt.bak">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/yinfans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -936,19 +797,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+    <entry file="file://$PROJECT_DIR$/MySQL/笔记.txt.bak">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="437">
+            <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/spiders/yinfans.py">
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/MovieMagneticLinkExtract/MovieMagneticLinkExtract/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/50hehe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/练习/笔记.md" />
+    <entry file="file://$PROJECT_DIR$/练习/网易有道/demo.py" />
+    <entry file="file://$PROJECT_DIR$/抢购/jinyuanshucang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="77" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/12.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/caihong.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/云庭典藏.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="29" lean-forward="true" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="28" lean-forward="true" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/qingyouhn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/my.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/capth.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/min_img.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/chrome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_demo/bilibili/bilibili.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="e#129#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/markartgo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/markartgo2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="81" column="78" selection-start-line="81" selection-start-column="78" selection-end-line="81" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/ametays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/抢购/zz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <element signature="e#123#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/items.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy框架2/downloadmiddlewaresDemo/downloadmiddlewaresDemo/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="80" lean-forward="true" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+          <folding>
+            <element signature="e#145#171#0" expanded="true" />
           </folding>
         </state>
       </provider>

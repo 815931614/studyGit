@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/scrapy框架2/jdbookRedis/jdbookRedis" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scrapy框架2/jdbookRedis" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scrapy框架2/MovieMagneticLinkExtract" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/selenium_demo/bilibili" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
